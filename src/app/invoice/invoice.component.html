@@ -1,0 +1,14 @@
+<!-- invoice.component.html -->
+<div>
+    <h2>Invoice</h2>
+    <p>Customer: {{ invoiceData.customerName }}</p>
+    <ul>
+      <li *ngFor="let item of invoiceData.items">
+        {{ item.name }} - Rs{{ item.price }}
+      </li>
+    </ul>
+    <p>Total: Rs{{ invoiceData.total }}</p>
+  </div>
+  
+  <button (click)="generatePDF()">Download PDF</button>
+  
